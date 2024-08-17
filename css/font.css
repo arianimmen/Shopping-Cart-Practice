@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Adidas";
+  font-weight: 300;
+  font-style: normal;
+  src: url(../assets/fonts/adihausdin_regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Adidas";
+  font-weight: 700;
+  font-style: normal;
+  src: url(../assets/fonts/adihausdin_bold.otf) format("opentype");
+}
+
+body {
+  font-family: "Adidas";
+}

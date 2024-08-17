@@ -1,0 +1,72 @@
+/* ------------------ Reset --------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  color: #000000;
+}
+
+.container {
+  max-width: 1550px;
+  margin: 0 auto;
+}
+
+/* ----------------    Root    ----------------- */
+:root {
+  --var-color-black: #000000;
+  --var-color-black-light: #333333;
+  --var-color-purple: #4a4c6c;
+}
+
+/* ---------------- Typography ----------------- */
+
+body {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+li,
+p,
+a {
+  font-size: 1.3rem;
+}
+
+/* ----------------  Header ------------------ */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.nav__links svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+}
+
+.nav__links__link {
+  margin-left: 1rem;
+}
+
+.nav__icons svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+}
