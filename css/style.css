@@ -14,8 +14,15 @@ a {
 }
 
 .container {
-  max-width: 1550px;
-  margin: 0 auto;
+  padding: 0rem 1rem;
+}
+
+@media screen and (min-width: 1550px) {
+  .container {
+    padding: 0rem;
+    max-width: 1550px;
+    margin: 0 auto;
+  }
 }
 
 /* ----------------    Root    ----------------- */
@@ -66,7 +73,56 @@ a {
 }
 
 .nav__icons svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-left: 1rem;
+  padding: 0.5rem;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.nav__icons .icon:hover {
+  cursor: pointer;
+}
+
+/* -------------- Hero Section -------------------- */
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero__image {
+  width: 70vw;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+.hero__maintext {
+  padding-top: 0.1rem;
+  font-size: 19vw;
+  font-family: "Uni-sans";
+  color: var(--var-color-purple);
+  opacity: 0.4;
+  text-align: center;
+}
+
+@media screen and (min-width: 1550px) {
+  .hero__image {
+    width: 770px;
+  }
+  .hero__maintext {
+    font-size: 208px;
+  }
 }

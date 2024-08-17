@@ -12,6 +12,12 @@
   src: url(../assets/fonts/adihausdin_bold.otf) format("opentype");
 }
 
+@font-face {
+  font-family: "Uni-sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url(../assets/fonts/UniSansHeavy.otf) format("opentype");
+}
 body {
   font-family: "Adidas";
 }
