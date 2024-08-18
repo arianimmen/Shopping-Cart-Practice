@@ -45,6 +45,6 @@ export const productsData = [
     id: 8,
     title: "ALTEE HV-B34",
     price: 230,
-    imageUrl: "./../assets/images/pic2.avif",
+    imageUrl: "./../assets/images/pic3.png",
   },
 ];
