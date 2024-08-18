@@ -131,7 +131,7 @@ class Ui {
           </div>`;
     });
     cartsContainerModal.innerHTML = result; //Updating the modal
-    Ui.updateCartValue()
+    Ui.updateCartValue();
 
     const removeBtns = [...document.querySelectorAll(".delete_icon")]; // Selecting the remove buttons (icons)
     removeBtns.forEach((btn) => {
@@ -191,6 +191,7 @@ class Ui {
     ui.addToModal(carts); // Updating the modal
     ui.displayProducts(Data.getdata()); // Updating the main home screen
     Ui.updateCartValue(); // Updating cart value
+    Ui.closeModal();
   }
 
   static openModal() {
