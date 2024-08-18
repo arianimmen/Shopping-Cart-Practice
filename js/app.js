@@ -131,18 +131,50 @@ class Ui {
           </div>`;
     });
     cartsContainerModal.innerHTML = result; //Updating the modal
+    Ui.updateCartValue()
 
-    const removeBtns = document.querySelectorAll(".delete_icon"); // Selecting the remove buttons (icons)
+    const removeBtns = [...document.querySelectorAll(".delete_icon")]; // Selecting the remove buttons (icons)
     removeBtns.forEach((btn) => {
-      btn.addEventListener("click", this.removeEachItemFromCart);
+      btn.addEventListener("click", (event) => {
+        const id = Number(event.target.dataset.id); // Finding the Id for the removing button
+        this.removeEachItemFromCart(id); // removing the selected cart
+      });
     });
+
+    const upArrows = [...document.querySelectorAll(".top_arrow")]; // Selecting the Up Arrow
+    upArrows.forEach(
+      (upArrow) =>
+        upArrow.addEventListener("click", this.addingItem.bind(null, 1)) // Adding one to quantity
+    );
+
+    const downArrows = [...document.querySelectorAll(".down_arrow")]; // Selecting the Donw Arrow
+    downArrows.forEach(
+      (downArrow) =>
+        downArrow.addEventListener("click", this.addingItem.bind(null, -1)) // Reducing one to quantity
+    );
   }
 
-  removeEachItemFromCart(event) {
+  addingItem(amount, event) {
     const ui = new Ui();
-    const btnId = Number(event.target.dataset.id);
+    const productId = Number(event.target.dataset.id);
+    carts.forEach((cart) => {
+      if (cart.id === productId) {
+        if (cart.quantity + amount === 0) {
+          ui.removeEachItemFromCart(productId);
+        } else {
+          cart.quantity += amount;
+        }
+      }
+    });
 
-    carts = carts.filter((cart) => cart.id !== btnId); //Updating global carts
+    Storage.saveCart(carts); //Updating local storage
+    ui.addToModal(carts); // Rebuilding the modal
+  }
+
+  removeEachItemFromCart(id) {
+    const ui = new Ui();
+
+    carts = carts.filter((cart) => cart.id !== id); //Updating global carts
 
     Storage.saveCart(carts); // Updating carts in Local storage
     ui.addToModal(carts); // Updating the modal

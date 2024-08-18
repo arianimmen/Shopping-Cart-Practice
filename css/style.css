@@ -174,10 +174,12 @@ a {
 .products__product__images {
   position: relative;
   border-radius: 10px;
+  background-color: rgb(238, 238, 238);
   overflow: hidden;
 }
 
 .products__product__button {
+  font-size: 1rem;
   outline: none;
   border: 0 solid;
   position: absolute;
@@ -272,6 +274,8 @@ a {
 .cart__item .cart_main_image {
   width: 23%;
   margin-right: 0.5rem;
+  background-color: rgba(238, 238, 238, 0.698);
+  border-radius: 10px;
 }
 /* *Important */
 .cart__section__background {
