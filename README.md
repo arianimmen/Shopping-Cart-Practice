@@ -17,6 +17,16 @@ All user interactions with the cart are stored in **local storage**, ensuring th
 Check out the live version of the website here:
 [Live View](https://arianimmen.github.io/Shopping-Cart-Practice/)
 
+![Screenshot from 2024-08-31 19-47-10](https://github.com/user-attachments/assets/7b579b7b-e0c9-4c4c-9ac9-89f9c08ece19)
+
+
+
+
+
+![Screenshot from 2024-08-31 19-47-25](https://github.com/user-attachments/assets/0fa3532c-ba1d-42ac-a470-623cba00acd5)
+
+
+
 ## 📸 Design Inspiration
 
 The design of this site was inspired by a Nike UI design on Figma. Approximately 60% of the design elements were inspired by this [Figma Community Design](https://www.figma.com/design/bLAw051QTqDLuAFgRmcOKJ/Nike-UI-Inspiration--Free-UI-(Recreated)-(Community)-(Community)?node-id=28-230&t=XTI4lUhUzDsY5DWn-00). The remaining elements were customized to suit the specific needs of this project.
